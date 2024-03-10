@@ -178,3 +178,189 @@ NameError: name 'STAGE_NAME' is not defined
 [2024-03-08 16:37:10,271 : INFO: main :>>>>>> stage Prepare base model completed <<<<<<
 
 x==========x]
+[2024-03-10 15:19:03,674 : INFO: main :*******************]
+[2024-03-10 15:19:03,675 : INFO: main :>>>>>> stage Training Phase started <<<<<<]
+[2024-03-10 15:19:03,678 : INFO: common :yaml file: config/config.yaml loaded successfully]
+[2024-03-10 15:19:03,680 : INFO: common :yaml file: params.yaml loaded successfully]
+[2024-03-10 15:19:03,680 : INFO: common :created directory at: artifacts]
+[2024-03-10 15:19:03,680 : ERROR: main :Argument path_to_directories of type <class 'pathlib.PosixPath'> to <function create_directories at 0x7f05638bd700> does not match annotation type <class 'list'>]
+Traceback (most recent call last):
+  File "main.py", line 31, in <module>
+    obj.main()
+  File "/home/sumedh/Documents/MLops_tutorial/Project_2/Kidney_disease_classification/src/cnn_classifier/pipeline/s3_model_training.py", line 21, in main
+    raise e
+  File "/home/sumedh/Documents/MLops_tutorial/Project_2/Kidney_disease_classification/src/cnn_classifier/pipeline/s3_model_training.py", line 14, in main
+    training_config = config.get_training_config()
+  File "/home/sumedh/Documents/MLops_tutorial/Project_2/Kidney_disease_classification/src/cnn_classifier/config/configuration.py", line 61, in get_training_config
+    create_directories(
+  File "/home/sumedh/anaconda3/envs/classification/lib/python3.8/site-packages/ensure/main.py", line 803, in __call__
+    raise EnsureError(msg.format(
+ensure.main.EnsureError: Argument path_to_directories of type <class 'pathlib.PosixPath'> to <function create_directories at 0x7f05638bd700> does not match annotation type <class 'list'>
+[2024-03-10 15:21:10,920 : INFO: main :*******************]
+[2024-03-10 15:21:10,920 : INFO: main :>>>>>> stage Training Phase started <<<<<<]
+[2024-03-10 15:21:10,923 : INFO: common :yaml file: config/config.yaml loaded successfully]
+[2024-03-10 15:21:10,924 : INFO: common :yaml file: params.yaml loaded successfully]
+[2024-03-10 15:21:10,924 : INFO: common :created directory at: artifacts]
+[2024-03-10 15:21:10,925 : INFO: common :created directory at: artifacts/training]
+[2024-03-10 15:21:10,925 : ERROR: main :"'ConfigBox' object has no attribute 'training_data'"]
+Traceback (most recent call last):
+  File "box/box.py", line 503, in box.box.Box.__getitem__
+KeyError: 'training_data'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 536, in box.box.Box.__getattr__
+  File "box/box.py", line 524, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'training_data'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 538, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'training_data'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/config_box.py", line 28, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 552, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'training_data'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 503, in box.box.Box.__getitem__
+KeyError: 'training_data'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 536, in box.box.Box.__getattr__
+  File "box/box.py", line 524, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'training_data'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 538, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'training_data'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "main.py", line 31, in <module>
+    obj.main()
+  File "/home/sumedh/Documents/MLops_tutorial/Project_2/Kidney_disease_classification/src/cnn_classifier/pipeline/s3_model_training.py", line 21, in main
+    raise e
+  File "/home/sumedh/Documents/MLops_tutorial/Project_2/Kidney_disease_classification/src/cnn_classifier/pipeline/s3_model_training.py", line 14, in main
+    training_config = config.get_training_config()
+  File "/home/sumedh/Documents/MLops_tutorial/Project_2/Kidney_disease_classification/src/cnn_classifier/config/configuration.py", line 69, in get_training_config
+    training_data= Path(training.training_data),
+  File "box/config_box.py", line 30, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 552, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'training_data'"
+[2024-03-10 15:23:18,351 : INFO: main :*******************]
+[2024-03-10 15:23:18,351 : INFO: main :>>>>>> stage Training Phase started <<<<<<]
+[2024-03-10 15:23:18,354 : INFO: common :yaml file: config/config.yaml loaded successfully]
+[2024-03-10 15:23:18,355 : INFO: common :yaml file: params.yaml loaded successfully]
+[2024-03-10 15:23:18,355 : INFO: common :created directory at: artifacts]
+[2024-03-10 15:23:18,356 : INFO: common :created directory at: artifacts/training]
+[2024-03-10 15:23:18,842 : ERROR: main :[Errno 2] No such file or directory: 'artifacts/data_ingestion/kidney-images']
+Traceback (most recent call last):
+  File "main.py", line 31, in <module>
+    obj.main()
+  File "/home/sumedh/Documents/MLops_tutorial/Project_2/Kidney_disease_classification/src/cnn_classifier/pipeline/s3_model_training.py", line 21, in main
+    raise e
+  File "/home/sumedh/Documents/MLops_tutorial/Project_2/Kidney_disease_classification/src/cnn_classifier/pipeline/s3_model_training.py", line 17, in main
+    training.train_valid_generator()
+  File "/home/sumedh/Documents/MLops_tutorial/Project_2/Kidney_disease_classification/src/cnn_classifier/componants/model_training.py", line 37, in train_valid_generator
+    self.valid_generator = valid_datagenerator.flow_from_directory(
+  File "/home/sumedh/anaconda3/envs/classification/lib/python3.8/site-packages/keras/preprocessing/image.py", line 1648, in flow_from_directory
+    return DirectoryIterator(
+  File "/home/sumedh/anaconda3/envs/classification/lib/python3.8/site-packages/keras/preprocessing/image.py", line 563, in __init__
+    for subdir in sorted(os.listdir(directory)):
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_ingestion/kidney-images'
+[2024-03-10 15:23:56,938 : INFO: main :*******************]
+[2024-03-10 15:23:56,938 : INFO: main :>>>>>> stage Training Phase started <<<<<<]
+[2024-03-10 15:23:56,941 : INFO: common :yaml file: config/config.yaml loaded successfully]
+[2024-03-10 15:23:56,942 : INFO: common :yaml file: params.yaml loaded successfully]
+[2024-03-10 15:23:56,942 : INFO: common :created directory at: artifacts]
+[2024-03-10 15:23:56,943 : INFO: common :created directory at: artifacts/training]
+[2024-03-10 15:23:57,393 : ERROR: main :'Training' object has no attribute 'steps_per_epoch']
+Traceback (most recent call last):
+  File "main.py", line 31, in <module>
+    obj.main()
+  File "/home/sumedh/Documents/MLops_tutorial/Project_2/Kidney_disease_classification/src/cnn_classifier/pipeline/s3_model_training.py", line 21, in main
+    raise e
+  File "/home/sumedh/Documents/MLops_tutorial/Project_2/Kidney_disease_classification/src/cnn_classifier/pipeline/s3_model_training.py", line 18, in main
+    training.train()
+  File "/home/sumedh/Documents/MLops_tutorial/Project_2/Kidney_disease_classification/src/cnn_classifier/componants/model_training.py", line 76, in train
+    steps_per_epochs = self.steps_per_epoch,
+AttributeError: 'Training' object has no attribute 'steps_per_epoch'
+[2024-03-10 15:24:23,896 : INFO: main :*******************]
+[2024-03-10 15:24:23,896 : INFO: main :>>>>>> stage Training Phase started <<<<<<]
+[2024-03-10 15:24:23,899 : INFO: common :yaml file: config/config.yaml loaded successfully]
+[2024-03-10 15:24:23,900 : INFO: common :yaml file: params.yaml loaded successfully]
+[2024-03-10 15:24:23,900 : INFO: common :created directory at: artifacts]
+[2024-03-10 15:24:23,901 : INFO: common :created directory at: artifacts/training]
+[2024-03-10 15:24:24,335 : ERROR: main :name 'callback_list' is not defined]
+Traceback (most recent call last):
+  File "main.py", line 31, in <module>
+    obj.main()
+  File "/home/sumedh/Documents/MLops_tutorial/Project_2/Kidney_disease_classification/src/cnn_classifier/pipeline/s3_model_training.py", line 21, in main
+    raise e
+  File "/home/sumedh/Documents/MLops_tutorial/Project_2/Kidney_disease_classification/src/cnn_classifier/pipeline/s3_model_training.py", line 18, in main
+    training.train()
+  File "/home/sumedh/Documents/MLops_tutorial/Project_2/Kidney_disease_classification/src/cnn_classifier/componants/model_training.py", line 79, in train
+    callbacks  = callback_list
+NameError: name 'callback_list' is not defined
+[2024-03-10 15:24:37,676 : INFO: main :*******************]
+[2024-03-10 15:24:37,676 : INFO: main :>>>>>> stage Training Phase started <<<<<<]
+[2024-03-10 15:24:37,679 : INFO: common :yaml file: config/config.yaml loaded successfully]
+[2024-03-10 15:24:37,680 : INFO: common :yaml file: params.yaml loaded successfully]
+[2024-03-10 15:24:37,680 : INFO: common :created directory at: artifacts]
+[2024-03-10 15:24:37,680 : INFO: common :created directory at: artifacts/training]
+[2024-03-10 15:24:38,122 : ERROR: main :fit() got an unexpected keyword argument 'steps_per_epochs']
+Traceback (most recent call last):
+  File "main.py", line 31, in <module>
+    obj.main()
+  File "/home/sumedh/Documents/MLops_tutorial/Project_2/Kidney_disease_classification/src/cnn_classifier/pipeline/s3_model_training.py", line 21, in main
+    raise e
+  File "/home/sumedh/Documents/MLops_tutorial/Project_2/Kidney_disease_classification/src/cnn_classifier/pipeline/s3_model_training.py", line 18, in main
+    training.train()
+  File "/home/sumedh/Documents/MLops_tutorial/Project_2/Kidney_disease_classification/src/cnn_classifier/componants/model_training.py", line 73, in train
+    self.model.fit(
+  File "/home/sumedh/anaconda3/envs/classification/lib/python3.8/site-packages/keras/utils/traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/home/sumedh/anaconda3/envs/classification/lib/python3.8/site-packages/keras/utils/traceback_utils.py", line 65, in error_handler
+    return fn(*args, **kwargs)
+TypeError: fit() got an unexpected keyword argument 'steps_per_epochs'
+[2024-03-10 15:26:04,550 : INFO: main :*******************]
+[2024-03-10 15:26:04,550 : INFO: main :>>>>>> stage Training Phase started <<<<<<]
+[2024-03-10 15:26:04,553 : INFO: common :yaml file: config/config.yaml loaded successfully]
+[2024-03-10 15:26:04,554 : INFO: common :yaml file: params.yaml loaded successfully]
+[2024-03-10 15:26:04,555 : INFO: common :created directory at: artifacts]
+[2024-03-10 15:26:04,555 : INFO: common :created directory at: artifacts/training]
+[2024-03-10 15:26:48,577 : WARNING: data_adapter :Your input ran out of data; interrupting training. Make sure that your dataset or generator can generate at least `steps_per_epoch * epochs` batches (in this case, 12 batches). You may need to use the repeat() function when building your dataset.]
+[2024-03-10 15:29:10,908 : ERROR: main :'Training' object has no attribute 'trained_model_path']
+Traceback (most recent call last):
+  File "main.py", line 31, in <module>
+    obj.main()
+  File "/home/sumedh/Documents/MLops_tutorial/Project_2/Kidney_disease_classification/src/cnn_classifier/pipeline/s3_model_training.py", line 21, in main
+    raise e
+  File "/home/sumedh/Documents/MLops_tutorial/Project_2/Kidney_disease_classification/src/cnn_classifier/pipeline/s3_model_training.py", line 18, in main
+    training.train()
+  File "/home/sumedh/Documents/MLops_tutorial/Project_2/Kidney_disease_classification/src/cnn_classifier/componants/model_training.py", line 84, in train
+    path = self.trained_model_path,
+AttributeError: 'Training' object has no attribute 'trained_model_path'
+[2024-03-10 15:31:06,760 : INFO: main :*******************]
+[2024-03-10 15:31:06,760 : INFO: main :>>>>>> stage Training Phase started <<<<<<]
+[2024-03-10 15:31:06,762 : INFO: common :yaml file: config/config.yaml loaded successfully]
+[2024-03-10 15:31:06,763 : INFO: common :yaml file: params.yaml loaded successfully]
+[2024-03-10 15:31:06,763 : INFO: common :created directory at: artifacts]
+[2024-03-10 15:31:06,764 : INFO: common :created directory at: artifacts/training]
+[2024-03-10 15:31:44,740 : WARNING: data_adapter :Your input ran out of data; interrupting training. Make sure that your dataset or generator can generate at least `steps_per_epoch * epochs` batches (in this case, 12 batches). You may need to use the repeat() function when building your dataset.]
+[2024-03-10 15:33:49,313 : INFO: main :>>>>>> stage Training Phase completed <<<<<<
+
+x==========x]
