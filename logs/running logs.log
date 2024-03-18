@@ -364,3 +364,145 @@ AttributeError: 'Training' object has no attribute 'trained_model_path'
 [2024-03-10 15:33:49,313 : INFO: main :>>>>>> stage Training Phase completed <<<<<<
 
 x==========x]
+[2024-03-14 14:12:20,147 : INFO: common :yaml file: config/config.yaml loaded successfully]
+[2024-03-14 14:12:20,150 : INFO: common :yaml file: params.yaml loaded successfully]
+[2024-03-14 14:12:20,150 : INFO: common :created directory at: artifacts]
+[2024-03-14 14:12:20,150 : INFO: common :created directory at: artifacts/data_ingestion]
+[2024-03-14 14:19:15,248 : INFO: main :Starting data ingestion pipeline]
+[2024-03-14 14:20:48,231 : INFO: common :yaml file: config/config.yaml loaded successfully]
+[2024-03-14 14:20:48,232 : INFO: common :yaml file: params.yaml loaded successfully]
+[2024-03-14 14:20:48,233 : INFO: common :created directory at: artifacts]
+[2024-03-14 14:20:48,233 : INFO: common :created directory at: artifacts/data_ingestion]
+[2024-03-14 14:21:57,430 : INFO: main :*******************]
+[2024-03-14 14:21:57,430 : INFO: main :>>>>>> stage Prepare base model started <<<<<<]
+[2024-03-14 14:21:57,433 : INFO: common :yaml file: config/config.yaml loaded successfully]
+[2024-03-14 14:21:57,434 : INFO: common :yaml file: params.yaml loaded successfully]
+[2024-03-14 14:21:57,434 : INFO: common :created directory at: artifacts]
+[2024-03-14 14:21:57,434 : INFO: common :created directory at: artifacts/prepare_base_model]
+[2024-03-14 14:21:57,975 : WARNING: saving_utils :Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-03-14 14:21:58,262 : INFO: main :>>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-03-14 14:30:40,093 : INFO: main :*******************]
+[2024-03-14 14:30:40,093 : INFO: main :>>>>>> stage Training Phase started <<<<<<]
+[2024-03-14 14:30:40,096 : INFO: common :yaml file: config/config.yaml loaded successfully]
+[2024-03-14 14:30:40,097 : INFO: common :yaml file: params.yaml loaded successfully]
+[2024-03-14 14:30:40,098 : INFO: common :created directory at: artifacts]
+[2024-03-14 14:30:40,098 : INFO: common :created directory at: artifacts/training]
+[2024-03-14 14:31:18,011 : WARNING: data_adapter :Your input ran out of data; interrupting training. Make sure that your dataset or generator can generate at least `steps_per_epoch * epochs` batches (in this case, 12 batches). You may need to use the repeat() function when building your dataset.]
+[2024-03-14 14:33:40,941 : INFO: main :>>>>>> stage Training Phase completed <<<<<<
+
+x==========x]
+[2024-03-18 15:56:25,592 : INFO: main :*******************]
+[2024-03-18 15:56:25,602 : INFO: main :>>>>>> stage Evaluation started <<<<<<]
+[2024-03-18 15:56:25,606 : INFO: common :yaml file: config/config.yaml loaded successfully]
+[2024-03-18 15:56:25,607 : INFO: common :yaml file: params.yaml loaded successfully]
+[2024-03-18 15:56:25,608 : INFO: common :created directory at: artifacts]
+[2024-03-18 15:56:25,608 : ERROR: main :'Evaluation' object has no attribute 'load_model']
+Traceback (most recent call last):
+  File "main.py", line 43, in <module>
+    obj.main()
+  File "/home/sumedh/Documents/MLops_tutorial/Project_2/Kidney_disease_classification/src/cnn_classifier/pipeline/s4_evaluation.py", line 17, in main
+    raise e
+  File "/home/sumedh/Documents/MLops_tutorial/Project_2/Kidney_disease_classification/src/cnn_classifier/pipeline/s4_evaluation.py", line 14, in main
+    evaluation.evaluation()
+  File "/home/sumedh/Documents/MLops_tutorial/Project_2/Kidney_disease_classification/src/cnn_classifier/componants/evaluation.py", line 43, in evaluation
+    self.model = self.load_model(self.config.path_of_model)
+AttributeError: 'Evaluation' object has no attribute 'load_model'
+[2024-03-18 15:57:05,477 : INFO: main :*******************]
+[2024-03-18 15:57:05,477 : INFO: main :>>>>>> stage Evaluation started <<<<<<]
+[2024-03-18 15:57:05,479 : INFO: common :yaml file: config/config.yaml loaded successfully]
+[2024-03-18 15:57:05,481 : INFO: common :yaml file: params.yaml loaded successfully]
+[2024-03-18 15:57:05,481 : INFO: common :created directory at: artifacts]
+[2024-03-18 15:57:06,131 : ERROR: main :name 'model' is not defined]
+Traceback (most recent call last):
+  File "main.py", line 43, in <module>
+    obj.main()
+  File "/home/sumedh/Documents/MLops_tutorial/Project_2/Kidney_disease_classification/src/cnn_classifier/pipeline/s4_evaluation.py", line 17, in main
+    raise e
+  File "/home/sumedh/Documents/MLops_tutorial/Project_2/Kidney_disease_classification/src/cnn_classifier/pipeline/s4_evaluation.py", line 14, in main
+    evaluation.evaluation()
+  File "/home/sumedh/Documents/MLops_tutorial/Project_2/Kidney_disease_classification/src/cnn_classifier/componants/evaluation.py", line 45, in evaluation
+    self.score = model.evaluate(self.valid_generator)
+NameError: name 'model' is not defined
+[2024-03-18 15:57:27,678 : INFO: main :*******************]
+[2024-03-18 15:57:27,678 : INFO: main :>>>>>> stage Evaluation started <<<<<<]
+[2024-03-18 15:57:27,680 : INFO: common :yaml file: config/config.yaml loaded successfully]
+[2024-03-18 15:57:27,681 : INFO: common :yaml file: params.yaml loaded successfully]
+[2024-03-18 15:57:27,681 : INFO: common :created directory at: artifacts]
+[2024-03-18 15:57:42,011 : ERROR: main :local variable 'scores' referenced before assignment]
+Traceback (most recent call last):
+  File "main.py", line 43, in <module>
+    obj.main()
+  File "/home/sumedh/Documents/MLops_tutorial/Project_2/Kidney_disease_classification/src/cnn_classifier/pipeline/s4_evaluation.py", line 17, in main
+    raise e
+  File "/home/sumedh/Documents/MLops_tutorial/Project_2/Kidney_disease_classification/src/cnn_classifier/pipeline/s4_evaluation.py", line 14, in main
+    evaluation.evaluation()
+  File "/home/sumedh/Documents/MLops_tutorial/Project_2/Kidney_disease_classification/src/cnn_classifier/componants/evaluation.py", line 46, in evaluation
+    self.save_score()
+  File "/home/sumedh/Documents/MLops_tutorial/Project_2/Kidney_disease_classification/src/cnn_classifier/componants/evaluation.py", line 49, in save_score
+    scores = {"Loss": scores[0], "Accuracy": scores[1]}
+UnboundLocalError: local variable 'scores' referenced before assignment
+[2024-03-18 15:58:22,632 : INFO: main :*******************]
+[2024-03-18 15:58:22,632 : INFO: main :>>>>>> stage Evaluation started <<<<<<]
+[2024-03-18 15:58:22,635 : INFO: common :yaml file: config/config.yaml loaded successfully]
+[2024-03-18 15:58:22,636 : INFO: common :yaml file: params.yaml loaded successfully]
+[2024-03-18 15:58:22,636 : INFO: common :created directory at: artifacts]
+[2024-03-18 15:58:36,925 : ERROR: main :name 'scores' is not defined]
+Traceback (most recent call last):
+  File "main.py", line 43, in <module>
+    obj.main()
+  File "/home/sumedh/Documents/MLops_tutorial/Project_2/Kidney_disease_classification/src/cnn_classifier/pipeline/s4_evaluation.py", line 17, in main
+    raise e
+  File "/home/sumedh/Documents/MLops_tutorial/Project_2/Kidney_disease_classification/src/cnn_classifier/pipeline/s4_evaluation.py", line 14, in main
+    evaluation.evaluation()
+  File "/home/sumedh/Documents/MLops_tutorial/Project_2/Kidney_disease_classification/src/cnn_classifier/componants/evaluation.py", line 46, in evaluation
+    self.save_score()
+  File "/home/sumedh/Documents/MLops_tutorial/Project_2/Kidney_disease_classification/src/cnn_classifier/componants/evaluation.py", line 49, in save_score
+    self.scores = {"Loss": scores[0], "Accuracy": scores[1]}
+NameError: name 'scores' is not defined
+[2024-03-18 15:59:51,621 : INFO: main :*******************]
+[2024-03-18 15:59:51,621 : INFO: main :>>>>>> stage Evaluation started <<<<<<]
+[2024-03-18 15:59:51,623 : INFO: common :yaml file: config/config.yaml loaded successfully]
+[2024-03-18 15:59:51,624 : INFO: common :yaml file: params.yaml loaded successfully]
+[2024-03-18 15:59:51,624 : INFO: common :created directory at: artifacts]
+[2024-03-18 16:00:05,927 : INFO: common :json file saved at: scores.json]
+[2024-03-18 16:00:05,927 : ERROR: main :module 'mlflow' has no attribute 'get_traking_uri']
+Traceback (most recent call last):
+  File "main.py", line 43, in <module>
+    obj.main()
+  File "/home/sumedh/Documents/MLops_tutorial/Project_2/Kidney_disease_classification/src/cnn_classifier/pipeline/s4_evaluation.py", line 17, in main
+    raise e
+  File "/home/sumedh/Documents/MLops_tutorial/Project_2/Kidney_disease_classification/src/cnn_classifier/pipeline/s4_evaluation.py", line 15, in main
+    evaluation.log_mlflow()
+  File "/home/sumedh/Documents/MLops_tutorial/Project_2/Kidney_disease_classification/src/cnn_classifier/componants/evaluation.py", line 54, in log_mlflow
+    tracking_uri_type_store = urlparse(mlflow.get_traking_uri()).scheme
+AttributeError: module 'mlflow' has no attribute 'get_traking_uri'
+[2024-03-18 16:00:27,939 : INFO: main :*******************]
+[2024-03-18 16:00:27,939 : INFO: main :>>>>>> stage Evaluation started <<<<<<]
+[2024-03-18 16:00:27,941 : INFO: common :yaml file: config/config.yaml loaded successfully]
+[2024-03-18 16:00:27,942 : INFO: common :yaml file: params.yaml loaded successfully]
+[2024-03-18 16:00:27,943 : INFO: common :created directory at: artifacts]
+[2024-03-18 16:00:42,498 : INFO: common :json file saved at: scores.json]
+[2024-03-18 16:00:45,050 : ERROR: main :'Evaluation' object has no attribute 'scores']
+Traceback (most recent call last):
+  File "main.py", line 43, in <module>
+    obj.main()
+  File "/home/sumedh/Documents/MLops_tutorial/Project_2/Kidney_disease_classification/src/cnn_classifier/pipeline/s4_evaluation.py", line 17, in main
+    raise e
+  File "/home/sumedh/Documents/MLops_tutorial/Project_2/Kidney_disease_classification/src/cnn_classifier/pipeline/s4_evaluation.py", line 15, in main
+    evaluation.log_mlflow()
+  File "/home/sumedh/Documents/MLops_tutorial/Project_2/Kidney_disease_classification/src/cnn_classifier/componants/evaluation.py", line 59, in log_mlflow
+    mlflow.log_metrics({"Loss": self.scores[0], "Accuracy": self.scores[1]})
+AttributeError: 'Evaluation' object has no attribute 'scores'
+[2024-03-18 16:01:09,369 : INFO: main :*******************]
+[2024-03-18 16:01:09,369 : INFO: main :>>>>>> stage Evaluation started <<<<<<]
+[2024-03-18 16:01:09,371 : INFO: common :yaml file: config/config.yaml loaded successfully]
+[2024-03-18 16:01:09,372 : INFO: common :yaml file: params.yaml loaded successfully]
+[2024-03-18 16:01:09,373 : INFO: common :created directory at: artifacts]
+[2024-03-18 16:01:24,287 : INFO: common :json file saved at: scores.json]
+[2024-03-18 16:01:27,749 : WARNING: save :Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2024-03-18 16:01:28,330 : INFO: builder_impl :Assets written to: /tmp/tmp6lxsmh53/model/data/model/assets]
+[2024-03-18 16:02:12,943 : INFO: main :>>>>>> stage Evaluation completed <<<<<<
+
+x==========x]

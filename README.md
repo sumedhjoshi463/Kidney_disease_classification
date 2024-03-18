@@ -21,3 +21,12 @@ conda activate cnncls
 ```bash
 pip install -r requirements.txt
 ```
+
+```bash
+
+export MLFLOW_TRACKING_URI=https://dagshub.com/sumedhjoshi463/Kidney_disease_classification.mlflow \
+export MLFLOW_TRACKING_USERNAME=sumedhjoshi463 \
+export MLFLOW_TRACKING_PASSWORD=0f775dbe7e2c5c4fd1cdd27877b3ee90821cbc07 \
+python script.py
+
+```
